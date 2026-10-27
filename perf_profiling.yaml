@@ -17,7 +17,8 @@ system:
     num_nodes: 1
     num_gpus_per_model: 1
   input:
-    dataset: /home/mlx/ai-ml/datasets/aifs-ea-an-oper-0001-mars-o96-1979-2023-6h-v8.zarr
+    # Set ANEMOI_DATASET_PATH to the folder that contains the datasets.
+    dataset: ${oc.env:ANEMOI_DATASET_PATH}/aifs-ea-an-oper-0001-mars-o96-1979-2023-6h-v8.zarr
     graph: ./graphs/o96_multiscale_graph.pt
   output:
     root: ./outputs/default
